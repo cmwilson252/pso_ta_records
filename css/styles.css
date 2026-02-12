@@ -1,0 +1,78 @@
+/* css/styles.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}
+
+main {
+  width: 100%;
+  max-width: none;
+  padding: 24px;
+}
+
+#status {
+  margin: 8px 0 16px;
+  color: #444;
+}
+
+table.pivot {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+table.pivot th,
+table.pivot td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+table.pivot thead th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Divider row between groups */
+tr.group-divider td {
+  padding: 0;
+  border-bottom: none;
+}
+
+.group-divider .bar {
+  height: 3px;
+  background: #2f6fdd; /* bold colored line */
+}
+
+/* Optional: small label above the bar */
+tr.group-label td {
+  font-weight: 700;
+  padding: 10px 12px 6px;
+  border-bottom: none;
+  background: #fff;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0 10px;
+}
+
+.controls select {
+  padding: 6px 10px;
+}
