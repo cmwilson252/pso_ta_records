@@ -1,5 +1,3 @@
-// js/app.js
-
 async function loadJSON(path) {
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error(`${path} -> ${res.status} ${res.statusText}`);
@@ -50,7 +48,6 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
   const headers = ["Quest", "Meta", "Category", "PB", "Time", "Rank", "Player", "Class", "POV"];
   const selected = (limitN ? records.slice(0, limitN) : records);
 
-  // Build joined rows: one row per player_record (or placeholder)
   const joinedRows = [];
   for (const record of selected) {
     const questName = questById.get(record.quest_id)?.name;
@@ -84,7 +81,6 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
     }
   }
 
-  // Sort by group, then by rank/time, then keep players grouped per record
   joinedRows.sort((a, b) => {
     const ka = groupKey(a.record, a.questName);
     const kb = groupKey(b.record, b.questName);
@@ -153,38 +149,62 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
     tbodyRows.push(`<tr>${tds}</tr>`);
   }
 
-  const tbody = `<tbody>${tbodyRows.join("")}</tbody>`;
-  return `<table class="pivot">${thead}${tbody}</table>`;
+  return `<table class="pivot">${thead}<tbody>${tbodyRows.join("")}</tbody></table>`;
 }
 
-function populatePlayerDropdown(selectEl, players) {
-  // Sort by name, then fill options
-  const sorted = [...players].sort((a, b) => (a.name || "").localeCompare(b.name || ""));
-  for (const p of sorted) {
-    const opt = document.createElement("option");
-    opt.value = String(p.id); // store player_id
-    opt.textContent = p.name;
-    selectEl.appendChild(opt);
+/**
+ * Filter logic:
+ * - selectedPlayerIds is a Set of player_id numbers
+ * - show records that include ANY of the selected players
+ */
+function filterRecordsByPlayersAny(records, playerRecords, selectedPlayerIds) {
+  if (!selectedPlayerIds.size) return records;
+
+  const recordIds = new Set();
+  for (const pr of playerRecords) {
+    if (selectedPlayerIds.has(pr.player_id)) recordIds.add(pr.record_id);
   }
+  return records.filter((r) => recordIds.has(r.id));
 }
 
-function filterRecordsByPlayer(records, playerRecords, playerId) {
-  if (!playerId) return records;
+/* ------------------ Multi-select typeahead UI ------------------ */
 
-  const pid = Number(playerId);
-  const recordIds = new Set(
-    playerRecords
-      .filter((pr) => pr.player_id === pid)
-      .map((pr) => pr.record_id)
-  );
+function normalize(s) {
+  return (s ?? "").toString().trim().toLowerCase();
+}
 
-  return records.filter((r) => recordIds.has(r.id));
+function createChip(name, onRemove) {
+  const chip = document.createElement("span");
+  chip.className = "chip";
+  chip.textContent = name;
+
+  const x = document.createElement("button");
+  x.type = "button";
+  x.className = "chip-x";
+  x.textContent = "×";
+  x.addEventListener("click", onRemove);
+
+  chip.appendChild(x);
+  return chip;
+}
+
+function showSuggestions(box, itemsHtml) {
+  if (!itemsHtml) {
+    box.hidden = true;
+    box.innerHTML = "";
+    return;
+  }
+  box.hidden = false;
+  box.innerHTML = itemsHtml;
 }
 
 (async () => {
   const statusEl = document.getElementById("status");
   const outputEl = document.getElementById("output");
-  const playerSelect = document.getElementById("playerFilter");
+
+  const playerInput = document.getElementById("playerInput");
+  const suggestionsEl = document.getElementById("suggestions");
+  const chipsEl = document.getElementById("chips");
 
   try {
     const [records, quests, playerRecords, players] = await Promise.all([
@@ -197,26 +217,107 @@ function filterRecordsByPlayer(records, playerRecords, playerId) {
     const questById = buildIdMap(quests);
     const playerById = buildIdMap(players);
 
-    // Populate dropdown
-    populatePlayerDropdown(playerSelect, players);
+    // Search list for typeahead
+    const playersByName = [...players]
+      .map(p => ({ id: Number(p.id), name: p.name ?? "" }))
+      .sort((a, b) => a.name.localeCompare(b.name));
 
-    // Render function
-    const render = () => {
-      const selectedPlayerId = playerSelect.value; // "" means all
-      const filtered = filterRecordsByPlayer(records, playerRecords, selectedPlayerId);
+    // Selected players
+    const selectedIds = new Set();
 
-      const label = selectedPlayerId
-        ? `Filtered to ${filtered.length} records for ${playerById.get(Number(selectedPlayerId))?.name ?? "player"}`
+    function renderChips() {
+      chipsEl.innerHTML = "";
+      for (const pid of selectedIds) {
+        const name = playerById.get(pid)?.name ?? `Player ${pid}`;
+        const chip = createChip(name, () => {
+          selectedIds.delete(pid);
+          renderChips();
+          render();
+        });
+        chipsEl.appendChild(chip);
+      }
+    }
+
+    function addPlayerById(pid) {
+      if (!pid || selectedIds.has(pid)) return;
+      selectedIds.add(pid);
+      renderChips();
+      render();
+    }
+
+    function render() {
+      const filtered = filterRecordsByPlayersAny(records, playerRecords, selectedIds);
+
+      const label = selectedIds.size
+        ? `Filtered to ${filtered.length} records for ${[...selectedIds]
+            .map(id => playerById.get(id)?.name ?? `Player ${id}`)
+            .join(", ")}`
         : `Showing ${filtered.length} records`;
 
       statusEl.textContent = label;
-
-      // For now, don’t limit; if you want 10/50/etc, pass a number as last argument
       outputEl.innerHTML = renderGroupedTable(filtered, questById, playerRecords, playerById, null);
-    };
+    }
 
-    // Initial render + on change
-    playerSelect.addEventListener("change", render);
+    function buildSuggestionList(query) {
+      const q = normalize(query);
+      if (!q) return "";
+
+      const matches = [];
+      for (const p of playersByName) {
+        if (selectedIds.has(p.id)) continue;
+        if (normalize(p.name).includes(q)) matches.push(p);
+        if (matches.length >= 10) break;
+      }
+
+      if (!matches.length) return "";
+
+      return matches
+        .map(p => `<div class="suggestion" data-id="${p.id}">${esc(p.name)}</div>`)
+        .join("");
+    }
+
+    // Events: typing shows suggestions
+    playerInput.addEventListener("input", () => {
+      const html = buildSuggestionList(playerInput.value);
+      showSuggestions(suggestionsEl, html);
+    });
+
+    // Click suggestion to add
+    suggestionsEl.addEventListener("click", (e) => {
+      const el = e.target.closest(".suggestion");
+      if (!el) return;
+      const pid = Number(el.getAttribute("data-id"));
+      addPlayerById(pid);
+      playerInput.value = "";
+      showSuggestions(suggestionsEl, "");
+      playerInput.focus();
+    });
+
+    // Enter tries to add best match
+    playerInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const q = normalize(playerInput.value);
+        if (!q) return;
+
+        const best = playersByName.find(p => !selectedIds.has(p.id) && normalize(p.name).includes(q));
+        if (best) {
+          addPlayerById(best.id);
+          playerInput.value = "";
+          showSuggestions(suggestionsEl, "");
+        }
+      } else if (e.key === "Escape") {
+        showSuggestions(suggestionsEl, "");
+      }
+    });
+
+    // Click outside closes suggestions
+    document.addEventListener("click", (e) => {
+      if (e.target === playerInput || suggestionsEl.contains(e.target)) return;
+      showSuggestions(suggestionsEl, "");
+    });
+
+    // Initial render
     render();
   } catch (err) {
     statusEl.textContent = "Failed to load data";
