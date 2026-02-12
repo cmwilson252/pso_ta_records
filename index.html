@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,20 +11,51 @@
   <main>
     <h1>PSO Time-Attack Records</h1>
 
-    <div class="controls">
-      <label for="playerInput">Filter by player(s):</label>
+    <div class="filters">
+      <!-- Players -->
+      <div class="filter">
+        <div class="filter-label">Players</div>
+        <div class="multi small">
+          <div id="playerChips" class="chips"></div>
+          <input id="playerInput" type="text" placeholder="Type a player…" autocomplete="off" />
+          <div id="playerSuggestions" class="suggestions" hidden></div>
+        </div>
+      </div>
 
-      <div class="multi">
-        <div id="chips" class="chips"></div>
+      <!-- Meta -->
+      <div class="filter">
+        <div class="filter-label">Meta</div>
+        <select id="metaSelect">
+          <option value="">All</option>
+        </select>
+      </div>
 
-        <input
-          id="playerInput"
-          type="text"
-          placeholder="Type a player name…"
-          autocomplete="off"
-        />
+      <!-- Player Count (Category: 1P/2P/4P etc) -->
+      <div class="filter">
+        <div class="filter-label">Count</div>
+        <select id="countSelect">
+          <option value="">All</option>
+        </select>
+      </div>
 
-        <div id="suggestions" class="suggestions" hidden></div>
+      <!-- PB -->
+      <div class="filter">
+        <div class="filter-label">PB</div>
+        <select id="pbSelect">
+          <option value="">All</option>
+          <option value="1">PB</option>
+          <option value="0">No-PB</option>
+        </select>
+      </div>
+
+      <!-- Class -->
+      <div class="filter">
+        <div class="filter-label">Class</div>
+        <div class="multi small">
+          <div id="classChips" class="chips"></div>
+          <input id="classInput" type="text" placeholder="Type a class…" autocomplete="off" />
+          <div id="classSuggestions" class="suggestions" hidden></div>
+        </div>
       </div>
     </div>
 

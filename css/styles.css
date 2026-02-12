@@ -1,3 +1,5 @@
+/* css/styles.css */
+
 * {
   box-sizing: border-box;
 }
@@ -19,67 +21,51 @@ main {
   color: #444;
 }
 
-table.pivot {
-  width: 100%;
-  border-collapse: collapse;
+/* ---------- Filters row ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: flex-end;
+  margin: 10px 0 12px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-label {
+  font-size: 13px;
+  color: #444;
+}
+
+.filter select {
+  min-width: 140px;
+  padding: 8px 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
-  table-layout: fixed;
-}
-
-table.pivot th,
-table.pivot td {
-  border-bottom: 1px solid #eee;
-  padding: 10px 12px;
-  text-align: left;
-  vertical-align: top;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-table.pivot thead th {
-  position: sticky;
-  top: 0;
-  background: #fafafa;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Divider row between groups */
-tr.group-divider td {
-  padding: 0;
-  border-bottom: none;
-}
-
-.group-divider .bar {
-  height: 3px;
-  background: #2f6fdd; /* bold colored line */
-}
-
-/* Optional: small label above the bar */
-tr.group-label td {
-  font-weight: 700;
-  padding: 10px 12px 6px;
-  border-bottom: none;
   background: #fff;
 }
 
-
-.controls {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin: 12px 0 10px;
-}
+/* ---------- Multi-select typeahead (players + class) ---------- */
 
 .multi {
   position: relative;
-  min-width: 320px;
-  max-width: 520px;
   flex: 1;
+  min-width: 320px;
+  max-width: 900px;
 }
 
-#playerInput {
+.multi.small {
+  min-width: 240px;
+  max-width: 360px; /* shrink player/class input */
+}
+
+#playerInput,
+#classInput {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid #ddd;
@@ -90,7 +76,7 @@ tr.group-label td {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 8px;
+  margin: 0 0 6px;
 }
 
 .chip {
@@ -121,7 +107,7 @@ tr.group-label td {
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   z-index: 10;
 }
@@ -133,4 +119,55 @@ tr.group-label td {
 
 .suggestion:hover {
   background: #f5f5f5;
+}
+
+/* ---------- Table ---------- */
+
+table.pivot {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+table.pivot th,
+table.pivot td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+table.pivot thead th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Group divider row (blue line) */
+tr.group-divider td {
+  padding: 0;
+  border-bottom: none;
+}
+
+.group-divider .bar {
+  height: 3px;
+  background: #2f6fdd;
+}
+
+/* Thin divider between entries within the same group */
+tr.entry-divider td {
+  padding: 0;
+  border-bottom: none;
+}
+
+tr.entry-divider .thin {
+  height: 1px;
+  background: #e6e6e6;
+  margin: 0;
 }

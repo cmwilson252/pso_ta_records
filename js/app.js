@@ -1,3 +1,5 @@
+// js/app.js
+
 async function loadJSON(path) {
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error(`${path} -> ${res.status} ${res.statusText}`);
@@ -19,6 +21,11 @@ function esc(v) {
     .replaceAll("'", "&#39;");
 }
 
+function normalize(s) {
+  return (s ?? "").toString().trim().toLowerCase();
+}
+
+// seconds -> 7'34 Remaining (if negative) or 6'00 (if positive)
 function formatTime(seconds) {
   const n = Number(seconds);
   if (!Number.isFinite(n)) return "";
@@ -37,11 +44,6 @@ function groupKey(record, questName) {
     record.category ?? "",
     record.pb ? "PB" : "NoPB",
   ].join("||");
-}
-
-function groupLabel(record, questName) {
-  const pbText = record.pb ? "PB" : "No-PB";
-  return `${questName ?? "(unknown quest)"} — ${record.category} — ${record.meta} — ${pbText}`;
 }
 
 function renderGroupedTable(records, questById, playerRecords, playerById, limitN) {
@@ -110,10 +112,8 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
     const pbText = record.pb ? "PB" : "No-PB";
     const gk = groupKey(record, questName);
 
+    // Group divider (blue line only)
     if (gk !== lastGroup) {
-      tbodyRows.push(
-        `<tr class="group-label"><td colspan="${headers.length}">${esc(groupLabel(record, questName))}</td></tr>`
-      );
       tbodyRows.push(
         `<tr class="group-divider"><td colspan="${headers.length}"><div class="bar"></div></td></tr>`
       );
@@ -122,6 +122,14 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
     }
 
     const isFirstRowForThisRecord = record.id !== lastRecordIdWithinGroup;
+
+    // Thin divider between entries within the same group
+    if (isFirstRowForThisRecord && lastRecordIdWithinGroup !== null) {
+      tbodyRows.push(
+        `<tr class="entry-divider"><td colspan="${headers.length}"><div class="thin"></div></td></tr>`
+      );
+    }
+
     if (isFirstRowForThisRecord) lastRecordIdWithinGroup = record.id;
 
     const povHTML =
@@ -152,26 +160,7 @@ function renderGroupedTable(records, questById, playerRecords, playerById, limit
   return `<table class="pivot">${thead}<tbody>${tbodyRows.join("")}</tbody></table>`;
 }
 
-/**
- * Filter logic:
- * - selectedPlayerIds is a Set of player_id numbers
- * - show records that include ANY of the selected players
- */
-function filterRecordsByPlayersAny(records, playerRecords, selectedPlayerIds) {
-  if (!selectedPlayerIds.size) return records;
-
-  const recordIds = new Set();
-  for (const pr of playerRecords) {
-    if (selectedPlayerIds.has(pr.player_id)) recordIds.add(pr.record_id);
-  }
-  return records.filter((r) => recordIds.has(r.id));
-}
-
-/* ------------------ Multi-select typeahead UI ------------------ */
-
-function normalize(s) {
-  return (s ?? "").toString().trim().toLowerCase();
-}
+/* ---------- Multi-select typeahead (reusable) ---------- */
 
 function createChip(name, onRemove) {
   const chip = document.createElement("span");
@@ -198,13 +187,162 @@ function showSuggestions(box, itemsHtml) {
   box.innerHTML = itemsHtml;
 }
 
+function wireMultiTypeahead({
+  inputEl,
+  suggestionsEl,
+  chipsEl,
+  // items: [{key, label}] where key is stored in the selected Set
+  items,
+  selectedSet,
+  onChange,
+  placeholderLabel,
+}) {
+  function renderChips() {
+    chipsEl.innerHTML = "";
+    for (const key of selectedSet) {
+      const label = items.find((it) => it.key === key)?.label ?? `${placeholderLabel} ${key}`;
+      const chip = createChip(label, () => {
+        selectedSet.delete(key);
+        renderChips();
+        onChange();
+      });
+      chipsEl.appendChild(chip);
+    }
+  }
+
+  function addKey(key) {
+    if (key == null || selectedSet.has(key)) return;
+    selectedSet.add(key);
+    renderChips();
+    onChange();
+  }
+
+  function buildSuggestionList(query) {
+    const q = normalize(query);
+    if (!q) return "";
+
+    const matches = [];
+    for (const it of items) {
+      if (selectedSet.has(it.key)) continue;
+      if (normalize(it.label).includes(q)) matches.push(it);
+      if (matches.length >= 10) break;
+    }
+
+    if (!matches.length) return "";
+
+    return matches
+      .map((it) => `<div class="suggestion" data-key="${esc(it.key)}">${esc(it.label)}</div>`)
+      .join("");
+  }
+
+  inputEl.addEventListener("input", () => {
+    showSuggestions(suggestionsEl, buildSuggestionList(inputEl.value));
+  });
+
+  suggestionsEl.addEventListener("click", (e) => {
+    const el = e.target.closest(".suggestion");
+    if (!el) return;
+    const key = el.getAttribute("data-key");
+    addKey(key);
+    inputEl.value = "";
+    showSuggestions(suggestionsEl, "");
+    inputEl.focus();
+  });
+
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const q = normalize(inputEl.value);
+      if (!q) return;
+
+      const best = items.find((it) => !selectedSet.has(it.key) && normalize(it.label).includes(q));
+      if (best) {
+        addKey(best.key);
+        inputEl.value = "";
+        showSuggestions(suggestionsEl, "");
+      }
+    } else if (e.key === "Escape") {
+      showSuggestions(suggestionsEl, "");
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target === inputEl || suggestionsEl.contains(e.target)) return;
+    showSuggestions(suggestionsEl, "");
+  });
+
+  renderChips();
+
+  return { renderChips };
+}
+
+/* ---------- Filtering ---------- */
+
+function filterRecords(records, playerRecords, selectedPlayerIds, selectedClasses, metaVal, countVal, pbVal) {
+  // Precompute sets of record_id that match players/classes
+  let allowedByPlayers = null;
+  let allowedByClasses = null;
+
+  if (selectedPlayerIds.size) {
+    allowedByPlayers = new Set();
+    for (const pr of playerRecords) {
+      if (selectedPlayerIds.has(String(pr.player_id))) allowedByPlayers.add(pr.record_id);
+    }
+  }
+
+  if (selectedClasses.size) {
+    allowedByClasses = new Set();
+    for (const pr of playerRecords) {
+      const cls = normalize(pr.pso_class);
+      if (selectedClasses.has(cls)) allowedByClasses.add(pr.record_id);
+    }
+  }
+
+  return records.filter((r) => {
+    if (metaVal && String(r.meta) !== metaVal) return false;
+    if (countVal && String(r.category) !== countVal) return false;
+    if (pbVal !== "" && String(Number(Boolean(r.pb))) !== pbVal) return false;
+
+    if (allowedByPlayers && !allowedByPlayers.has(r.id)) return false;
+    if (allowedByClasses && !allowedByClasses.has(r.id)) return false;
+
+    return true;
+  });
+}
+
+function fillSelect(selectEl, values) {
+  // keep first option "All"
+  const first = selectEl.firstElementChild;
+  selectEl.innerHTML = "";
+  if (first) selectEl.appendChild(first);
+
+  const sorted = [...values].sort((a, b) => String(a).localeCompare(String(b)));
+  for (const v of sorted) {
+    const opt = document.createElement("option");
+    opt.value = String(v);
+    opt.textContent = String(v);
+    selectEl.appendChild(opt);
+  }
+}
+
 (async () => {
   const statusEl = document.getElementById("status");
   const outputEl = document.getElementById("output");
 
+  // Filter elements
+  const metaSelect = document.getElementById("metaSelect");
+  const countSelect = document.getElementById("countSelect");
+  const pbSelect = document.getElementById("pbSelect");
+
+  // Player typeahead elements
   const playerInput = document.getElementById("playerInput");
-  const suggestionsEl = document.getElementById("suggestions");
-  const chipsEl = document.getElementById("chips");
+  const playerSuggestions = document.getElementById("playerSuggestions");
+  const playerChips = document.getElementById("playerChips");
+
+  // Class typeahead elements
+  const classInput = document.getElementById("classInput");
+  const classSuggestions = document.getElementById("classSuggestions");
+  const classChips = document.getElementById("classChips");
 
   try {
     const [records, quests, playerRecords, players] = await Promise.all([
@@ -217,105 +355,92 @@ function showSuggestions(box, itemsHtml) {
     const questById = buildIdMap(quests);
     const playerById = buildIdMap(players);
 
-    // Search list for typeahead
-    const playersByName = [...players]
-      .map(p => ({ id: Number(p.id), name: p.name ?? "" }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    // Build meta/count unique sets from records
+    const metas = new Set(records.map((r) => r.meta).filter((v) => v != null && v !== ""));
+    const counts = new Set(records.map((r) => r.category).filter((v) => v != null && v !== ""));
 
-    // Selected players
-    const selectedIds = new Set();
+    fillSelect(metaSelect, metas);
+    fillSelect(countSelect, counts);
 
-    function renderChips() {
-      chipsEl.innerHTML = "";
-      for (const pid of selectedIds) {
-        const name = playerById.get(pid)?.name ?? `Player ${pid}`;
-        const chip = createChip(name, () => {
-          selectedIds.delete(pid);
-          renderChips();
-          render();
-        });
-        chipsEl.appendChild(chip);
-      }
+    // Build typeahead items
+    const playerItems = [...players]
+      .map((p) => ({ key: String(p.id), label: p.name ?? "" }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+
+    // Classes come from player_records (pso_class)
+    const classSet = new Set();
+    for (const pr of playerRecords) {
+      const c = normalize(pr.pso_class);
+      if (c) classSet.add(c);
     }
+    const classItems = [...classSet]
+      .map((c) => ({ key: c, label: c }))
+      .sort((a, b) => a.label.localeCompare(b.label));
 
-    function addPlayerById(pid) {
-      if (!pid || selectedIds.has(pid)) return;
-      selectedIds.add(pid);
-      renderChips();
-      render();
-    }
+    // Selected filters
+    const selectedPlayerIds = new Set(); // string ids
+    const selectedClasses = new Set();   // normalized class strings
 
     function render() {
-      const filtered = filterRecordsByPlayersAny(records, playerRecords, selectedIds);
+      const metaVal = metaSelect.value;
+      const countVal = countSelect.value;
+      const pbVal = pbSelect.value; // "" | "1" | "0"
 
-      const label = selectedIds.size
-        ? `Filtered to ${filtered.length} records for ${[...selectedIds]
-            .map(id => playerById.get(id)?.name ?? `Player ${id}`)
+      const filtered = filterRecords(
+        records,
+        playerRecords,
+        selectedPlayerIds,
+        selectedClasses,
+        metaVal,
+        countVal,
+        pbVal
+      );
+
+      const parts = [];
+      if (selectedPlayerIds.size) {
+        parts.push(
+          `Players: ${[...selectedPlayerIds]
+            .map((id) => playerById.get(Number(id))?.name ?? id)
             .join(", ")}`
+        );
+      }
+      if (metaVal) parts.push(`Meta: ${metaVal}`);
+      if (countVal) parts.push(`Count: ${countVal}`);
+      if (pbVal !== "") parts.push(`PB: ${pbVal === "1" ? "PB" : "No-PB"}`);
+      if (selectedClasses.size) parts.push(`Class: ${[...selectedClasses].join(", ")}`);
+
+      statusEl.textContent = parts.length
+        ? `Showing ${filtered.length} records (${parts.join(" • ")})`
         : `Showing ${filtered.length} records`;
 
-      statusEl.textContent = label;
       outputEl.innerHTML = renderGroupedTable(filtered, questById, playerRecords, playerById, null);
     }
 
-    function buildSuggestionList(query) {
-      const q = normalize(query);
-      if (!q) return "";
-
-      const matches = [];
-      for (const p of playersByName) {
-        if (selectedIds.has(p.id)) continue;
-        if (normalize(p.name).includes(q)) matches.push(p);
-        if (matches.length >= 10) break;
-      }
-
-      if (!matches.length) return "";
-
-      return matches
-        .map(p => `<div class="suggestion" data-id="${p.id}">${esc(p.name)}</div>`)
-        .join("");
-    }
-
-    // Events: typing shows suggestions
-    playerInput.addEventListener("input", () => {
-      const html = buildSuggestionList(playerInput.value);
-      showSuggestions(suggestionsEl, html);
+    // Wire up typeaheads
+    wireMultiTypeahead({
+      inputEl: playerInput,
+      suggestionsEl: playerSuggestions,
+      chipsEl: playerChips,
+      items: playerItems,
+      selectedSet: selectedPlayerIds,
+      onChange: render,
+      placeholderLabel: "Player",
     });
 
-    // Click suggestion to add
-    suggestionsEl.addEventListener("click", (e) => {
-      const el = e.target.closest(".suggestion");
-      if (!el) return;
-      const pid = Number(el.getAttribute("data-id"));
-      addPlayerById(pid);
-      playerInput.value = "";
-      showSuggestions(suggestionsEl, "");
-      playerInput.focus();
+    wireMultiTypeahead({
+      inputEl: classInput,
+      suggestionsEl: classSuggestions,
+      chipsEl: classChips,
+      items: classItems,
+      selectedSet: selectedClasses,
+      onChange: render,
+      placeholderLabel: "Class",
     });
 
-    // Enter tries to add best match
-    playerInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        const q = normalize(playerInput.value);
-        if (!q) return;
-
-        const best = playersByName.find(p => !selectedIds.has(p.id) && normalize(p.name).includes(q));
-        if (best) {
-          addPlayerById(best.id);
-          playerInput.value = "";
-          showSuggestions(suggestionsEl, "");
-        }
-      } else if (e.key === "Escape") {
-        showSuggestions(suggestionsEl, "");
-      }
-    });
-
-    // Click outside closes suggestions
-    document.addEventListener("click", (e) => {
-      if (e.target === playerInput || suggestionsEl.contains(e.target)) return;
-      showSuggestions(suggestionsEl, "");
-    });
+    // Dropdown changes
+    metaSelect.addEventListener("change", render);
+    countSelect.addEventListener("change", render);
+    pbSelect.addEventListener("change", render);
 
     // Initial render
     render();

@@ -213,7 +213,7 @@
     "id": 31,
     "player_id": 141,
     "record_id": 18,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -241,7 +241,7 @@
     "id": 35,
     "player_id": 5,
     "record_id": 21,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -262,7 +262,7 @@
     "id": 38,
     "player_id": 8,
     "record_id": 22,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -325,7 +325,7 @@
     "id": 47,
     "player_id": 7,
     "record_id": 25,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -360,7 +360,7 @@
     "id": 52,
     "player_id": 4,
     "record_id": 28,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -556,7 +556,7 @@
     "id": 80,
     "player_id": 115,
     "record_id": 42,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -584,35 +584,35 @@
     "id": 84,
     "player_id": 7,
     "record_id": 43,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 85,
     "player_id": 7,
     "record_id": 44,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 86,
     "player_id": 4,
     "record_id": 44,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 87,
     "player_id": 31,
     "record_id": 44,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 88,
     "player_id": 30,
     "record_id": 44,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -633,14 +633,14 @@
     "id": 91,
     "player_id": 115,
     "record_id": 45,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 92,
     "player_id": 7,
     "record_id": 45,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -661,28 +661,28 @@
     "id": 95,
     "player_id": 115,
     "record_id": 46,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 96,
     "player_id": 7,
     "record_id": 46,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 97,
     "player_id": 30,
     "record_id": 47,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 98,
     "player_id": 31,
     "record_id": 47,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -696,21 +696,21 @@
     "id": 100,
     "player_id": 7,
     "record_id": 48,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 101,
     "player_id": 30,
     "record_id": 49,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 102,
     "player_id": 31,
     "record_id": 50,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -724,7 +724,7 @@
     "id": 104,
     "player_id": 115,
     "record_id": 51,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -773,7 +773,7 @@
     "id": 111,
     "player_id": 115,
     "record_id": 58,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -794,14 +794,14 @@
     "id": 114,
     "player_id": 7,
     "record_id": 60,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 115,
     "player_id": 30,
     "record_id": 61,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -815,7 +815,7 @@
     "id": 117,
     "player_id": 32,
     "record_id": 61,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -885,14 +885,14 @@
     "id": 127,
     "player_id": 35,
     "record_id": 67,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=gQwZgrg5ezE"
   },
   {
     "id": 128,
     "player_id": 115,
     "record_id": 68,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -906,7 +906,7 @@
     "id": 130,
     "player_id": 5,
     "record_id": 69,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -920,7 +920,7 @@
     "id": 132,
     "player_id": 5,
     "record_id": 70,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -969,7 +969,7 @@
     "id": 139,
     "player_id": 115,
     "record_id": 72,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -990,14 +990,14 @@
     "id": 142,
     "player_id": 115,
     "record_id": 73,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 143,
     "player_id": 126,
     "record_id": 73,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1025,7 +1025,7 @@
     "id": 147,
     "player_id": 126,
     "record_id": 74,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1053,7 +1053,7 @@
     "id": 151,
     "player_id": 126,
     "record_id": 75,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1067,7 +1067,7 @@
     "id": 153,
     "player_id": 31,
     "record_id": 76,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/idmc7bmGgAg"
   },
   {
@@ -1081,7 +1081,7 @@
     "id": 155,
     "player_id": 7,
     "record_id": 77,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/LVLjx1vLIgs"
   },
   {
@@ -1095,14 +1095,14 @@
     "id": 157,
     "player_id": 30,
     "record_id": 78,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=dH11BwtE0zE"
   },
   {
     "id": 158,
     "player_id": 31,
     "record_id": 79,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -1116,7 +1116,7 @@
     "id": 160,
     "player_id": 130,
     "record_id": 80,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1158,7 +1158,7 @@
     "id": 166,
     "player_id": 7,
     "record_id": 81,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1242,7 +1242,7 @@
     "id": 178,
     "player_id": 31,
     "record_id": 85,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1284,7 +1284,7 @@
     "id": 184,
     "player_id": 7,
     "record_id": 86,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -1312,7 +1312,7 @@
     "id": 188,
     "player_id": 5,
     "record_id": 87,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1333,14 +1333,14 @@
     "id": 191,
     "player_id": 64,
     "record_id": 88,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
     "id": 192,
     "player_id": 7,
     "record_id": 88,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1361,7 +1361,7 @@
     "id": 195,
     "player_id": 31,
     "record_id": 89,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -1396,7 +1396,7 @@
     "id": 200,
     "player_id": 6,
     "record_id": 90,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1487,14 +1487,14 @@
     "id": 213,
     "player_id": 30,
     "record_id": 98,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/RXXWVTj_SWc"
   },
   {
     "id": 214,
     "player_id": 31,
     "record_id": 99,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -1522,7 +1522,7 @@
     "id": 218,
     "player_id": 31,
     "record_id": 102,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -1648,7 +1648,7 @@
     "id": 236,
     "player_id": 13,
     "record_id": 107,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -1725,7 +1725,7 @@
     "id": 247,
     "player_id": 15,
     "record_id": 111,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=0TVJ0vSYY4Y"
   },
   {
@@ -1746,7 +1746,7 @@
     "id": 250,
     "player_id": 13,
     "record_id": 112,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -1879,7 +1879,7 @@
     "id": 269,
     "player_id": 13,
     "record_id": 122,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -2089,7 +2089,7 @@
     "id": 299,
     "player_id": 15,
     "record_id": 132,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -2159,7 +2159,7 @@
     "id": 309,
     "player_id": 145,
     "record_id": 141,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -2180,7 +2180,7 @@
     "id": 312,
     "player_id": 145,
     "record_id": 144,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -2313,7 +2313,7 @@
     "id": 331,
     "player_id": 49,
     "record_id": 152,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -2327,7 +2327,7 @@
     "id": 333,
     "player_id": 159,
     "record_id": 154,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -2376,7 +2376,7 @@
     "id": 340,
     "player_id": 52,
     "record_id": 158,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -2418,7 +2418,7 @@
     "id": 346,
     "player_id": 38,
     "record_id": 160,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": "https://www.youtube.com/watch?v=sgSyaQ3zqIc"
   },
   {
@@ -2600,7 +2600,7 @@
     "id": 372,
     "player_id": 145,
     "record_id": 168,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -2761,7 +2761,7 @@
     "id": 395,
     "player_id": 107,
     "record_id": 177,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=-TGLUCskRf8"
   },
   {
@@ -2782,7 +2782,7 @@
     "id": 398,
     "player_id": 13,
     "record_id": 178,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -2810,7 +2810,7 @@
     "id": 402,
     "player_id": 13,
     "record_id": 179,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -2887,7 +2887,7 @@
     "id": 413,
     "player_id": 16,
     "record_id": 182,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -3090,7 +3090,7 @@
     "id": 442,
     "player_id": 13,
     "record_id": 192,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -3188,7 +3188,7 @@
     "id": 456,
     "player_id": 16,
     "record_id": 199,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -3216,7 +3216,7 @@
     "id": 460,
     "player_id": 16,
     "record_id": 200,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -3307,7 +3307,7 @@
     "id": 473,
     "player_id": 13,
     "record_id": 203,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -3370,7 +3370,7 @@
     "id": 482,
     "player_id": 13,
     "record_id": 206,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -3832,21 +3832,21 @@
     "id": 548,
     "player_id": 23,
     "record_id": 230,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=fLknmfGFZ-4"
   },
   {
     "id": 549,
     "player_id": 133,
     "record_id": 231,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=E-atYq7zmR0"
   },
   {
     "id": 550,
     "player_id": 143,
     "record_id": 232,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -3895,7 +3895,7 @@
     "id": 557,
     "player_id": 58,
     "record_id": 234,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -3909,21 +3909,21 @@
     "id": 559,
     "player_id": 23,
     "record_id": 235,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=bP0HC5bxDdE&t=1s"
   },
   {
     "id": 560,
     "player_id": 19,
     "record_id": 236,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/1Bqwh7Se2sU"
   },
   {
     "id": 561,
     "player_id": 143,
     "record_id": 237,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -3972,7 +3972,7 @@
     "id": 568,
     "player_id": 133,
     "record_id": 239,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4175,7 +4175,7 @@
     "id": 597,
     "player_id": 82,
     "record_id": 249,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -4357,21 +4357,21 @@
     "id": 623,
     "player_id": 133,
     "record_id": 263,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=6c55Xhz474w"
   },
   {
     "id": 624,
     "player_id": 12,
     "record_id": 264,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 625,
     "player_id": 11,
     "record_id": 264,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4385,7 +4385,7 @@
     "id": 627,
     "player_id": 59,
     "record_id": 265,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4399,28 +4399,28 @@
     "id": 629,
     "player_id": 14,
     "record_id": 266,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=QqL5-ENo1Uc"
   },
   {
     "id": 630,
     "player_id": 12,
     "record_id": 267,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 631,
     "player_id": 59,
     "record_id": 268,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 632,
     "player_id": 14,
     "record_id": 269,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4434,7 +4434,7 @@
     "id": 634,
     "player_id": 62,
     "record_id": 270,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4448,7 +4448,7 @@
     "id": 636,
     "player_id": 59,
     "record_id": 271,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4497,7 +4497,7 @@
     "id": 643,
     "player_id": 23,
     "record_id": 277,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4511,7 +4511,7 @@
     "id": 645,
     "player_id": 23,
     "record_id": 278,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=7nJ4k6TusBw"
   },
   {
@@ -4567,7 +4567,7 @@
     "id": 653,
     "player_id": 25,
     "record_id": 282,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=NFjaZ9vXDY8"
   },
   {
@@ -4623,21 +4623,21 @@
     "id": 661,
     "player_id": 19,
     "record_id": 287,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": "https://youtu.be/9-D9DsbI3KQ"
   },
   {
     "id": 662,
     "player_id": 62,
     "record_id": 288,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 663,
     "player_id": 133,
     "record_id": 289,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=adwksxB9ix4"
   },
   {
@@ -4665,28 +4665,28 @@
     "id": 667,
     "player_id": 19,
     "record_id": 293,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=YYXpKU7M1sU"
   },
   {
     "id": 668,
     "player_id": 11,
     "record_id": 294,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=pJwiuPvhLxA"
   },
   {
     "id": 669,
     "player_id": 77,
     "record_id": 295,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 670,
     "player_id": 143,
     "record_id": 296,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4700,7 +4700,7 @@
     "id": 672,
     "player_id": 20,
     "record_id": 297,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=DNHYzKecAS8"
   },
   {
@@ -4714,7 +4714,7 @@
     "id": 674,
     "player_id": 19,
     "record_id": 298,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=YxmOLYaCkJo"
   },
   {
@@ -4728,7 +4728,7 @@
     "id": 676,
     "player_id": 11,
     "record_id": 299,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=G8nQpl4tZqg"
   },
   {
@@ -4763,7 +4763,7 @@
     "id": 681,
     "player_id": 11,
     "record_id": 301,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=mZ_QBPCToyA"
   },
   {
@@ -4784,7 +4784,7 @@
     "id": 684,
     "player_id": 11,
     "record_id": 302,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/fHAztN1rF-Y"
   },
   {
@@ -4910,7 +4910,7 @@
     "id": 702,
     "player_id": 59,
     "record_id": 308,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4931,7 +4931,7 @@
     "id": 705,
     "player_id": 25,
     "record_id": 309,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/lHFEzmkXnn0"
   },
   {
@@ -4952,7 +4952,7 @@
     "id": 708,
     "player_id": 59,
     "record_id": 310,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -4980,7 +4980,7 @@
     "id": 712,
     "player_id": 11,
     "record_id": 311,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.twitch.tv/videos/684032533"
   },
   {
@@ -5001,7 +5001,7 @@
     "id": 715,
     "player_id": 11,
     "record_id": 312,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5022,14 +5022,14 @@
     "id": 718,
     "player_id": 59,
     "record_id": 313,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 719,
     "player_id": 21,
     "record_id": 313,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5043,7 +5043,7 @@
     "id": 721,
     "player_id": 59,
     "record_id": 314,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=5GLE_nmiLkk"
   },
   {
@@ -5057,7 +5057,7 @@
     "id": 723,
     "player_id": 63,
     "record_id": 315,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=Jg0V88CVPDM"
   },
   {
@@ -5071,7 +5071,7 @@
     "id": 725,
     "player_id": 23,
     "record_id": 317,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5092,21 +5092,21 @@
     "id": 728,
     "player_id": 23,
     "record_id": 318,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 729,
     "player_id": 2,
     "record_id": 319,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/pEF0Kceyv2I"
   },
   {
     "id": 730,
     "player_id": 133,
     "record_id": 320,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5141,7 +5141,7 @@
     "id": 735,
     "player_id": 20,
     "record_id": 322,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5176,14 +5176,14 @@
     "id": 740,
     "player_id": 133,
     "record_id": 324,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
     "id": 741,
     "player_id": 54,
     "record_id": 325,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=uv_moNkU9u4"
   },
   {
@@ -5204,7 +5204,7 @@
     "id": 744,
     "player_id": 25,
     "record_id": 327,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/Gbdkl0H0whI"
   },
   {
@@ -5225,7 +5225,7 @@
     "id": 747,
     "player_id": 25,
     "record_id": 328,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=qMmcOanxDcw"
   },
   {
@@ -5253,7 +5253,7 @@
     "id": 751,
     "player_id": 22,
     "record_id": 329,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=xA1yR09CQ_E"
   },
   {
@@ -5274,7 +5274,7 @@
     "id": 754,
     "player_id": 54,
     "record_id": 330,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -5358,7 +5358,7 @@
     "id": 766,
     "player_id": 22,
     "record_id": 335,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=fqKZnWB3BqU"
   },
   {
@@ -5386,7 +5386,7 @@
     "id": 770,
     "player_id": 56,
     "record_id": 336,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5428,7 +5428,7 @@
     "id": 776,
     "player_id": 56,
     "record_id": 339,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5449,7 +5449,7 @@
     "id": 779,
     "player_id": 147,
     "record_id": 340,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -5477,7 +5477,7 @@
     "id": 783,
     "player_id": 19,
     "record_id": 341,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5554,7 +5554,7 @@
     "id": 794,
     "player_id": 133,
     "record_id": 346,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5603,7 +5603,7 @@
     "id": 801,
     "player_id": 152,
     "record_id": 349,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5617,28 +5617,28 @@
     "id": 803,
     "player_id": 40,
     "record_id": 351,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
     "id": 804,
     "player_id": 54,
     "record_id": 352,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://youtu.be/zVRqtEyj9AU"
   },
   {
     "id": 805,
     "player_id": 93,
     "record_id": 353,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
     "id": 806,
     "player_id": 22,
     "record_id": 354,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=h8Aw_lrZn3E"
   },
   {
@@ -5652,7 +5652,7 @@
     "id": 808,
     "player_id": 25,
     "record_id": 355,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=3oYt6pOkV-A"
   },
   {
@@ -5666,7 +5666,7 @@
     "id": 810,
     "player_id": 3,
     "record_id": 356,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5680,7 +5680,7 @@
     "id": 812,
     "player_id": 25,
     "record_id": 357,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=lO7XR9-LDYY"
   },
   {
@@ -5701,7 +5701,7 @@
     "id": 815,
     "player_id": 25,
     "record_id": 358,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=lHCHzHk4TM4"
   },
   {
@@ -5757,7 +5757,7 @@
     "id": 823,
     "player_id": 25,
     "record_id": 361,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=13W_1FXQd6Q"
   },
   {
@@ -5848,7 +5848,7 @@
     "id": 836,
     "player_id": 19,
     "record_id": 369,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5876,7 +5876,7 @@
     "id": 840,
     "player_id": 19,
     "record_id": 370,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -5925,7 +5925,7 @@
     "id": 847,
     "player_id": 59,
     "record_id": 372,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5946,7 +5946,7 @@
     "id": 850,
     "player_id": 59,
     "record_id": 373,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -5960,7 +5960,7 @@
     "id": 852,
     "player_id": 93,
     "record_id": 375,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -6219,7 +6219,7 @@
     "id": 889,
     "player_id": 48,
     "record_id": 389,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -6338,7 +6338,7 @@
     "id": 906,
     "player_id": 2,
     "record_id": 394,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6506,7 +6506,7 @@
     "id": 930,
     "player_id": 3,
     "record_id": 404,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=8KHYz8bIeLI"
   },
   {
@@ -6520,7 +6520,7 @@
     "id": 932,
     "player_id": 3,
     "record_id": 406,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=6_0BOYh4ouY"
   },
   {
@@ -6534,7 +6534,7 @@
     "id": 934,
     "player_id": 3,
     "record_id": 407,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.twitch.tv/videos/1055642920"
   },
   {
@@ -6548,7 +6548,7 @@
     "id": 936,
     "player_id": 14,
     "record_id": 408,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -6569,7 +6569,7 @@
     "id": 939,
     "player_id": 111,
     "record_id": 409,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6583,7 +6583,7 @@
     "id": 941,
     "player_id": 59,
     "record_id": 411,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -6681,7 +6681,7 @@
     "id": 955,
     "player_id": 3,
     "record_id": 417,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6702,7 +6702,7 @@
     "id": 958,
     "player_id": 60,
     "record_id": 418,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6751,7 +6751,7 @@
     "id": 965,
     "player_id": 14,
     "record_id": 421,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6807,7 +6807,7 @@
     "id": 973,
     "player_id": 55,
     "record_id": 423,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6856,7 +6856,7 @@
     "id": 980,
     "player_id": 59,
     "record_id": 426,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6954,7 +6954,7 @@
     "id": 994,
     "player_id": 67,
     "record_id": 430,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -6968,7 +6968,7 @@
     "id": 996,
     "player_id": 110,
     "record_id": 431,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -7003,7 +7003,7 @@
     "id": 1001,
     "player_id": 3,
     "record_id": 435,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -7017,14 +7017,14 @@
     "id": 1003,
     "player_id": 112,
     "record_id": 435,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 1004,
     "player_id": 3,
     "record_id": 436,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=VyP25gzgRAg"
   },
   {
@@ -7045,14 +7045,14 @@
     "id": 1007,
     "player_id": 3,
     "record_id": 438,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.twitch.tv/videos/910764184"
   },
   {
     "id": 1008,
     "player_id": 110,
     "record_id": 439,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -7073,7 +7073,7 @@
     "id": 1011,
     "player_id": 3,
     "record_id": 440,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -7241,7 +7241,7 @@
     "id": 1035,
     "player_id": 56,
     "record_id": 448,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -7367,14 +7367,14 @@
     "id": 1053,
     "player_id": 114,
     "record_id": 454,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 1054,
     "player_id": 70,
     "record_id": 455,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=RLwn8APdRDU"
   },
   {
@@ -7423,14 +7423,14 @@
     "id": 1061,
     "player_id": 26,
     "record_id": 457,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
     "id": 1062,
     "player_id": 56,
     "record_id": 457,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -7801,7 +7801,7 @@
     "id": 1115,
     "player_id": 23,
     "record_id": 474,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -7850,7 +7850,7 @@
     "id": 1122,
     "player_id": 53,
     "record_id": 476,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -7997,7 +7997,7 @@
     "id": 1143,
     "player_id": 114,
     "record_id": 482,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -8011,14 +8011,14 @@
     "id": 1145,
     "player_id": 26,
     "record_id": 483,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
     "id": 1146,
     "player_id": 56,
     "record_id": 483,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -8179,7 +8179,7 @@
     "id": 1169,
     "player_id": 114,
     "record_id": 490,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -8242,7 +8242,7 @@
     "id": 1178,
     "player_id": 26,
     "record_id": 493,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -8326,7 +8326,7 @@
     "id": 1194,
     "player_id": 37,
     "record_id": 497,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -8816,7 +8816,7 @@
     "id": 1264,
     "player_id": 70,
     "record_id": 519,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=R_Dv2xosYtg"
   },
   {
@@ -8830,7 +8830,7 @@
     "id": 1266,
     "player_id": 77,
     "record_id": 520,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -9019,14 +9019,14 @@
     "id": 1293,
     "player_id": 26,
     "record_id": 533,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
     "id": 1294,
     "player_id": 56,
     "record_id": 533,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -9313,7 +9313,7 @@
     "id": 1335,
     "player_id": 114,
     "record_id": 544,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -9355,7 +9355,7 @@
     "id": 1341,
     "player_id": 23,
     "record_id": 546,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=DD5Lnx15iMo"
   },
   {
@@ -9383,7 +9383,7 @@
     "id": 1345,
     "player_id": 29,
     "record_id": 548,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -11189,7 +11189,7 @@
     "id": 1603,
     "player_id": 31,
     "record_id": 614,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -11532,7 +11532,7 @@
     "id": 1652,
     "player_id": 23,
     "record_id": 630,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=Yau8nWIiXrU"
   },
   {
@@ -11574,14 +11574,14 @@
     "id": 1658,
     "player_id": 23,
     "record_id": 633,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=NKCuotp_DsA"
   },
   {
     "id": 1659,
     "player_id": 23,
     "record_id": 634,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=2LAXVUx4Msw"
   },
   {
@@ -11602,14 +11602,14 @@
     "id": 1662,
     "player_id": 23,
     "record_id": 636,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=yqvlS-KJSTs"
   },
   {
     "id": 1663,
     "player_id": 25,
     "record_id": 637,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://www.youtube.com/watch?v=azFafjFzpGk"
   },
   {
@@ -11637,7 +11637,7 @@
     "id": 1667,
     "player_id": 30,
     "record_id": 639,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -11658,14 +11658,14 @@
     "id": 1670,
     "player_id": 30,
     "record_id": 640,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 1671,
     "player_id": 110,
     "record_id": 641,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/nOvgDWYYEN0"
   },
   {
@@ -12596,7 +12596,7 @@
     "id": 1804,
     "player_id": 252,
     "record_id": 678,
-    "pso_class": "humar",
+    "pso_class": "HUmar",
     "pov": null
   },
   {
@@ -12722,7 +12722,7 @@
     "id": 1822,
     "player_id": 227,
     "record_id": 687,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -12939,7 +12939,7 @@
     "id": 1853,
     "player_id": 30,
     "record_id": 703,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -12953,7 +12953,7 @@
     "id": 1855,
     "player_id": 30,
     "record_id": 704,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -12981,7 +12981,7 @@
     "id": 1859,
     "player_id": 30,
     "record_id": 706,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -13002,14 +13002,14 @@
     "id": 1862,
     "player_id": 31,
     "record_id": 707,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 1863,
     "player_id": 30,
     "record_id": 707,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -13023,14 +13023,14 @@
     "id": 1865,
     "player_id": 30,
     "record_id": 708,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 1866,
     "player_id": 31,
     "record_id": 708,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -13072,7 +13072,7 @@
     "id": 1872,
     "player_id": 260,
     "record_id": 710,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/7kCJq4xCZBU"
   },
   {
@@ -13114,14 +13114,14 @@
     "id": 1878,
     "player_id": 110,
     "record_id": 712,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/QQOc4AZj7Dk"
   },
   {
     "id": 1879,
     "player_id": 263,
     "record_id": 712,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -13184,7 +13184,7 @@
     "id": 1888,
     "player_id": 3,
     "record_id": 716,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
@@ -13212,7 +13212,7 @@
     "id": 1892,
     "player_id": 3,
     "record_id": 719,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": "https://youtu.be/h1g86o21Xjg"
   },
   {
@@ -13247,14 +13247,14 @@
     "id": 1897,
     "player_id": 3,
     "record_id": 721,
-    "pso_class": "ramar",
+    "pso_class": "RAmar",
     "pov": null
   },
   {
     "id": 1899,
     "player_id": 54,
     "record_id": 723,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://youtu.be/NfryNFmCEQo"
   },
   {
@@ -13331,7 +13331,7 @@
     "id": 1910,
     "player_id": 133,
     "record_id": 729,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -13506,7 +13506,7 @@
     "id": 1935,
     "player_id": 6,
     "record_id": 740,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -13527,7 +13527,7 @@
     "id": 1938,
     "player_id": 267,
     "record_id": 741,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": null
   },
   {
@@ -13583,7 +13583,7 @@
     "id": 1946,
     "player_id": 21,
     "record_id": 743,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=pUJbZ4iXMHw"
   },
   {
@@ -13674,7 +13674,7 @@
     "id": 1959,
     "player_id": 21,
     "record_id": 747,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -13723,7 +13723,7 @@
     "id": 1966,
     "player_id": 30,
     "record_id": 751,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://youtu.be/R-RBETGQsGs"
   },
   {
@@ -13765,14 +13765,14 @@
     "id": 1972,
     "player_id": 272,
     "record_id": 752,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 1973,
     "player_id": 54,
     "record_id": 753,
-    "pso_class": "racaseal",
+    "pso_class": "RAcaseal",
     "pov": "https://www.youtube.com/watch?v=CEAZc5_uwPg"
   },
   {
@@ -13891,14 +13891,14 @@
     "id": 1990,
     "player_id": 31,
     "record_id": 761,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
     "id": 1991,
     "player_id": 30,
     "record_id": 762,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": null
   },
   {
@@ -13947,7 +13947,7 @@
     "id": 1998,
     "player_id": 21,
     "record_id": 766,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=uZV61dvYCS4"
   },
   {
@@ -13961,7 +13961,7 @@
     "id": 2000,
     "player_id": 21,
     "record_id": 767,
-    "pso_class": "ramarl",
+    "pso_class": "RAmarl",
     "pov": "https://www.youtube.com/watch?v=RvOxwx3taUg"
   }
 ]
